@@ -1,8 +1,8 @@
 // TradingViewWidget.jsx
-import React, { useEffect, useRef, memo } from "react";
+import { useEffect, useRef, memo } from "react";
 
 function TradingViewWidget() {
-  const container = useRef();
+  const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -23,7 +23,7 @@ function TradingViewWidget() {
           "allow_symbol_change": true,
           "support_host": "https://www.tradingview.com"
         }`;
-    container.current.appendChild(script);
+    container.current?.appendChild(script);
   }, []);
 
   return (
