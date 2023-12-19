@@ -1,34 +1,32 @@
-import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Hide, Text, VStack } from "@chakra-ui/react";
 import SvgIcon from "../SvgIcon";
 
 const FeatureButtons = () => {
   return (
-    <HStack>
+    <HStack spacing={"20px"}>
       <Box
-        height="38px"
-        padding="11px"
-        bg="rgba(53,58,77,0.1)"
+        height={["24px", "38px"]}
+        padding={["5px", "11px"]}
+        bg="header.btnBg"
         borderRadius="4px"
-        _hover={{ bg: "#ced2dd" }}
+        _hover={{ bg: "header.btnHover" }}
         cursor="pointer"
       >
-        <SvgIcon name="notification" width="16px" height="16px" />
+        <SvgIcon name="notification" width="16px" height="16px" color="#fff" />
       </Box>
 
       <Flex
         height="38px"
-        // padding="11px"
         px="12px"
         py="4px"
-        bg="rgba(53,58,77,0.1)"
+        bg="header.btnBg"
         borderRadius="4px"
         justifyContent="center"
         alignItems="center"
-        _hover={{ bg: "#ced2dd" }}
+        _hover={{ bg: "header.btnHover" }}
         cursor="pointer"
       >
         <SvgIcon name="profile-level-standart" />
-
         <VStack gap={0} marginLeft="14px" mr="10px">
           <Text
             fontSize="10px"
@@ -39,46 +37,58 @@ const FeatureButtons = () => {
             真实账户
           </Text>
           <Text
-            color="#353a4d"
+            color="#fff"
             whiteSpace="nowrap"
             fontSize="13px"
             lineHeight="18px"
             fontWeight="700"
           >
-            $0.000
+            $0.00
           </Text>
         </VStack>
-        <SvgIcon name="caret" width="11px" height="11px" color="#353a4d" />
+        <SvgIcon name="caret" width="11px" height="11px" color="#fff" />
       </Flex>
 
-      <HStack
-        height="38px"
-        padding="10px 12px"
-        cursor="pointer"
-        alignItems="center"
-        minWidth="125px"
-        justify="center"
-        bg="#0faf59"
-        borderRadius="4px"
-        boxShadow="0 4px 10px rgba(53,183,113,.25)"
-        _hover={{ bg: "#05c65e" }}
-      >
-        <SvgIcon name="plus" width="12px" height="12px" />
-        <Text fontSize="14px" fontWeight="700">
-          存款
-        </Text>
-      </HStack>
+      <HStack>
+        <HStack
+          height="38px"
+          padding="10px 12px"
+          cursor="pointer"
+          alignItems="center"
+          // minWidth="125px"
+          sx={{
+            "@media (max-width: 1023px)": {
+              minWidth: "125px",
+            },
+          }}
+          justify="center"
+          bg="#0faf59"
+          borderRadius="4px"
+          boxShadow="0 4px 10px rgba(53,183,113,.25)"
+          _hover={{ bg: "#05c65e" }}
+        >
+          <SvgIcon name="plus" width="12px" height="12px" />
+          <Text fontSize="14px" fontWeight="700">
+            存款
+          </Text>
+        </HStack>
 
-      <HStack
-        height="38px"
-        padding="10px 12px"
-        bg="#353a4d"
-        cursor="pointer"
-        alignItems="center"
-        justify="center"
-        borderRadius="4px"
-      >
-        <Text>取款</Text>
+        <Hide breakpoint="(max-width: 1023px)">
+          <HStack
+            height="38px"
+            padding="10px 12px"
+            bg="header.btnBg"
+            alignItems="center"
+            justify="center"
+            borderRadius="4px"
+            _hover={{ bg: "header.btnHover" }}
+            cursor="pointer"
+          >
+            <Text fontSize="14px" fontWeight="700">
+              取款
+            </Text>
+          </HStack>
+        </Hide>
       </HStack>
     </HStack>
   );

@@ -8,10 +8,10 @@ const config: ThemeConfig = {
 const breakpoints = {
   base: "0em", // 0px
   sm: "576px", // 576px
-  md: "48em", // ~768px
-  lg: "62em", // ~992px
-  xl: "80em", // ~1280px
-  "2xl": "96em", // ~1536px
+  md: "768px", // ~768px
+  lg: "992px", // ~992px
+  xl: "1280px", // ~1280px
+  "2xl": "1536px", // ~1536px
 };
 
 const theme = extendTheme({ config, breakpoints, colors: dark });
