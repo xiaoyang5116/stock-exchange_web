@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Flex
       as="header"
-      mt="15px"
+      mt={["6px", "15px"]}
       mb="10px"
       pr="10px"
       height={["24px", "38px"]}

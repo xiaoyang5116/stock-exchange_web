@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Hide, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Hide, Text } from "@chakra-ui/react";
 import SvgIcon from "../SvgIcon";
 
 const FeatureButtons = () => {
@@ -11,12 +11,13 @@ const FeatureButtons = () => {
         borderRadius="4px"
         _hover={{ bg: "header.btnHover" }}
         cursor="pointer"
+        order={[1, 0]}
       >
         <SvgIcon name="notification" width="16px" height="16px" color="#fff" />
       </Box>
 
       <Flex
-        height="38px"
+        height={["24px", "38px"]}
         px="12px"
         py="4px"
         bg="header.btnBg"
@@ -25,9 +26,17 @@ const FeatureButtons = () => {
         alignItems="center"
         _hover={{ bg: "header.btnHover" }}
         cursor="pointer"
+        order={[0, 1]}
       >
         <SvgIcon name="profile-level-standart" />
-        <VStack gap={0} marginLeft="14px" mr="10px">
+        <Flex
+          gap={[2, 0]}
+          marginLeft="14px"
+          mr="10px"
+          direction={["row", "column"]}
+          justify={"center"}
+          alignItems="center"
+        >
           <Text
             fontSize="10px"
             fontWeight="900"
@@ -45,11 +54,11 @@ const FeatureButtons = () => {
           >
             $0.00
           </Text>
-        </VStack>
+        </Flex>
         <SvgIcon name="caret" width="11px" height="11px" color="#fff" />
       </Flex>
 
-      <HStack>
+      <HStack order={[3, 3]}>
         <HStack
           height="38px"
           padding="10px 12px"
