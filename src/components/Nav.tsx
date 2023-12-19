@@ -16,9 +16,9 @@ const Nav = () => {
   return (
     <Box pt={"20px"}>
       <Stack spacing={"30px"} justify={"center"} alignItems={"center"}>
-        <SvgIcon name={"burger-dark"} color="nav.iconColor" />
+        <SvgIcon name={"burger-dark"} color="#fff" />
         {navData.map((item) => (
-          <SvgIcon name={item.icon} key={item.key} color="nav.iconColor" />
+          <SvgIcon name={item.icon} key={item.key} color="#fff" />
         ))}
       </Stack>
     </Box>

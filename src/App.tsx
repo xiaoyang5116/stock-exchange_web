@@ -1,6 +1,6 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Nav from "./components/Nav";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 // import EmbeddedStock from "./components/EmbeddedStock";
 
 function App() {
