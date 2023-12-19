@@ -8,9 +8,21 @@ interface Props {
   style?: React.CSSProperties;
 }
 
-const SvgIcon = ({ name, color, width = 20, height = 20, style }: Props) => {
+const SvgIcon = ({
+  name,
+  color,
+  width = "20px",
+  height = "20px",
+  style,
+}: Props) => {
   return (
-    <svg width={width} height={height} style={style} color={color} fill={color}>
+    <svg
+      width={width}
+      height={height}
+      style={{ cursor: "pointer", ...style }}
+      color={color}
+      fill={color}
+    >
       <use href={`${spritemap}#icon-${name}`} />
     </svg>
   );
