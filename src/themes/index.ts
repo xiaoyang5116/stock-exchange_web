@@ -1,4 +1,5 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import dark from "./dark";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -13,6 +14,6 @@ const breakpoints = {
   "2xl": "96em", // ~1536px
 };
 
-const theme = extendTheme({ config, breakpoints });
+const theme = extendTheme({ config, breakpoints, colors: dark });
 
 export default theme;

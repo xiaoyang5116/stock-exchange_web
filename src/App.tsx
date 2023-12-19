@@ -16,10 +16,9 @@ function App() {
       }}
       minH={"100vh"}
       gap="10px"
-      bg={"#FAFAFA"}
     >
       <Show above={"sm"}>
-        <GridItem bg="#fff" area={"nav"}>
+        <GridItem area={"nav"}>
           <Nav />
         </GridItem>
       </Show>

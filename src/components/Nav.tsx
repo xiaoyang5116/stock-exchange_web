@@ -1,5 +1,5 @@
-import { Box, Stack } from '@chakra-ui/react';
-import SvgIcon from './SvgIcon';
+import { Box, Stack } from "@chakra-ui/react";
+import SvgIcon from "./SvgIcon";
 
 const navData = [
   { key: 1, icon: "help", title: "客服" },
@@ -14,14 +14,15 @@ const navData = [
 
 const Nav = () => {
   return (
-    <Box pt={"20px"} >
-      <Stack spacing={"30px"} justify={"center"} alignItems={"center"} >
-        <SvgIcon name={"burger-light"} color='#a0002a' />
-        {navData.map(item => <SvgIcon name={item.icon} key={item.key} color='#a0002a' />)}
+    <Box pt={"20px"}>
+      <Stack spacing={"30px"} justify={"center"} alignItems={"center"}>
+        <SvgIcon name={"burger-dark"} color="nav.iconColor" />
+        {navData.map((item) => (
+          <SvgIcon name={item.icon} key={item.key} color="nav.iconColor" />
+        ))}
       </Stack>
     </Box>
+  );
+};
 
-  )
-}
-
-export default Nav
+export default Nav;

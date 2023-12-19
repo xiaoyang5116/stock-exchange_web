@@ -1,3 +1,4 @@
+import { Icon } from "@chakra-ui/react";
 import spritemap from "../images/spritemap.svg";
 
 interface Props {
@@ -16,7 +17,7 @@ const SvgIcon = ({
   style,
 }: Props) => {
   return (
-    <svg
+    <Icon
       width={width}
       height={height}
       style={{ cursor: "pointer", ...style }}
@@ -24,7 +25,7 @@ const SvgIcon = ({
       fill={color}
     >
       <use href={`${spritemap}#icon-${name}`} />
-    </svg>
+    </Icon>
   );
 };
 
