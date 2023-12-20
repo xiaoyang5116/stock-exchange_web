@@ -10,7 +10,7 @@ const DealList = () => {
     "w-64 bg-[#303440] flex flex-row px-11 text-[10px] items-center";
 
   return (
-    <div className="h-100 hidden rounded bg-[#2b3040] sm:block">
+    <div className="h-100 hidden rounded bg-[#2b3040] sm:block xl:w-200 xl:ml-10">
       <div className="h-42 w-full flex flex-row">
         <button
           className={`transition-all ${

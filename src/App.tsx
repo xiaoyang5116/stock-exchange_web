@@ -26,7 +26,7 @@ function App() {
       </Show>
       <GridItem area={"main"} borderRadius="5px" className="flex flex-col">
         <Header />
-        <main className="h-full w-full flex flex-col sm:m-10">
+        <main className="h-full w-full flex flex-col overflow-hidden sm:p-10 xl:flex-row ">
           <EmbeddedStock />
           <div>
             <StockSidebar />
