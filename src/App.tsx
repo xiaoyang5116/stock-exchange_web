@@ -24,16 +24,14 @@ function App() {
           <Nav />
         </GridItem>
       </Show>
-      <GridItem
-        area={"main"}
-        borderRadius="5px"
-        className="flex flex-col sm:block"
-      >
+      <GridItem area={"main"} borderRadius="5px" className="flex flex-col">
         <Header />
-        <main className="h-full flex flex-col sm:m-10">
+        <main className="h-full w-full flex flex-col sm:m-10">
           <EmbeddedStock />
-          <StockSidebar />
-          <DealList />
+          <div>
+            <StockSidebar />
+            <DealList />
+          </div>
         </main>
         <FooterNav />
       </GridItem>
