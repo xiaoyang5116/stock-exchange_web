@@ -9,7 +9,7 @@ import {
   Switch,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import FlagsIcon from "./Svg/FlagsIcon";
+import FlagsIcon from "../Svg/FlagsIcon";
 
 const StockSidebar = () => {
   return (
