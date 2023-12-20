@@ -1,5 +1,5 @@
 import { Box, HStack, Hide, Show, Text } from "@chakra-ui/react";
-import SvgIcon from "../SvgIcon";
+import SvgIcon from "../Svg/SvgIcon";
 
 const Logo = () => {
   return (

@@ -1,5 +1,5 @@
 import { Flex, Stack } from "@chakra-ui/react";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "./Svg/SvgIcon";
 
 const navData = [
   { key: 1, icon: "help", title: "客服" },

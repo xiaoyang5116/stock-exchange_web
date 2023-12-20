@@ -1,4 +1,4 @@
-import spritemap from "../images/spritemap.svg";
+import spritemap from "../../images/spritemap.svg";
 
 interface Props {
   name: string;

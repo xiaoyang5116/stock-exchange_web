@@ -1,5 +1,5 @@
 import { Text } from "@chakra-ui/react";
-import SvgIcon from "../SvgIcon";
+import SvgIcon from "../Svg/SvgIcon";
 
 const FeatureButtons = () => {
   return (
