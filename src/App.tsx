@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import EmbeddedStock from "./components/EmbeddedStock";
 import StockSidebar from "./components/StockSidebar/StockSidebar";
 import DealList from "./components/StockSidebar/DealList";
+import FooterNav from "./components/FooterNav";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <StockSidebar />
           <DealList />
         </main>
+        <FooterNav />
       </GridItem>
     </Grid>
   );
