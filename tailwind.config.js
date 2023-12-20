@@ -9,7 +9,7 @@ export default {
       xl: "1280px", // ~1280px
       "2xl": "1536px", // ~1536px
     },
-    spacing: Array.from({ length: 100 }).reduce((map, _, index) => {
+    spacing: Array.from({ length: 1000 }).reduce((map, _, index) => {
       map[index] = `${index}px`;
       return map;
     }, {}),

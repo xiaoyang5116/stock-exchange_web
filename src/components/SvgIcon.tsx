@@ -6,9 +6,11 @@ interface Props {
   height?: number | string;
   color?: string;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 const SvgIcon = ({
+  className,
   name,
   color,
   width = "20px",
@@ -22,6 +24,7 @@ const SvgIcon = ({
       style={{ cursor: "pointer", ...style }}
       color={color}
       fill={color}
+      className={className}
     >
       <use href={`${spritemap}#icon-${name}`} />
     </svg>

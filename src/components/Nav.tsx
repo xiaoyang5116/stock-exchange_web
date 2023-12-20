@@ -1,4 +1,4 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Flex, Stack } from "@chakra-ui/react";
 import SvgIcon from "./SvgIcon";
 
 const navData = [
@@ -14,14 +14,25 @@ const navData = [
 
 const Nav = () => {
   return (
-    <Box pt={"20px"}>
-      <Stack spacing={"30px"} justify={"center"} alignItems={"center"}>
+    <Stack
+      spacing="0"
+      as={"nav"}
+      minH="100vh"
+      justify="start"
+      alignItems={"center"}
+    >
+      <Flex height={["58px"]} justify={"center"} alignItems={"center"}>
         <SvgIcon name={"burger-dark"} color="#fff" />
-        {navData.map((item) => (
+      </Flex>
+      {navData.map((item) => (
+        <Flex
+          key={item.key}
+          className="w-50 h-36 justify-center items-center mb-10 transition-colors duration-300 hover:bg-[#026fd3] rounded-[4px]"
+        >
           <SvgIcon name={item.icon} key={item.key} color="#fff" />
-        ))}
-      </Stack>
-    </Box>
+        </Flex>
+      ))}
+    </Stack>
   );
 };
 

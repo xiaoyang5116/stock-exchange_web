@@ -1,105 +1,67 @@
-import { Box, Flex, HStack, Hide, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import SvgIcon from "../SvgIcon";
 
 const FeatureButtons = () => {
   return (
-    <HStack spacing={"20px"}>
-      <Box
-        height={["24px", "38px"]}
-        padding={["5px", "11px"]}
-        bg="header.btnBg"
-        borderRadius="4px"
-        _hover={{ bg: "header.btnHover" }}
-        cursor="pointer"
-        order={[1, 0]}
-      >
-        <SvgIcon name="notification" width="16px" height="16px" color="#fff" />
-      </Box>
+    <div className="w-full flex flex-row justify-between sm:w-auto">
+      {/* 账户 */}
+      <div className="px-5 bg-[#2b3040] flex items-center rounded-[4px] hover:bg-[#000] cursor-pointer sm:order-2 sm:px-12 sm:py-4 sm:h-38">
+        <SvgIcon
+          name="profile-level-standart"
+          className="h-14 w-14 sm:h-20 sm:w-20"
+        />
 
-      <Flex
-        height={["24px", "38px"]}
-        px="12px"
-        py="4px"
-        bg="header.btnBg"
-        borderRadius="4px"
-        justifyContent="center"
-        alignItems="center"
-        _hover={{ bg: "header.btnHover" }}
-        cursor="pointer"
-        order={[0, 1]}
-      >
-        <SvgIcon name="profile-level-standart" />
-        <Flex
-          gap={[2, 0]}
-          marginLeft="14px"
-          mr="10px"
-          direction={["row", "column"]}
-          justify={"center"}
-          alignItems="center"
-        >
-          <Text
-            fontSize="10px"
-            fontWeight="900"
-            color="#9a9da6"
-            textTransform="uppercase"
-          >
+        <div className="flex items-center ml-6 sm:ml-14 sm:flex-col ">
+          <Text className="text-[10px] font-[900] text-[#9a9da6] uppercase">
             真实账户
           </Text>
-          <Text
-            color="#fff"
-            whiteSpace="nowrap"
-            fontSize="13px"
-            lineHeight="18px"
-            fontWeight="700"
-          >
+          <Text className="text-[12px] text-[#fff] font-[900] ml-10 leading-[16px] sm:ml-0 sm:text-[14px] sm:font-[700] sm:leading-[18px]">
             $0.00
           </Text>
-        </Flex>
-        <SvgIcon name="caret" width="11px" height="11px" color="#fff" />
-      </Flex>
+        </div>
+        <SvgIcon
+          name="caret"
+          width="11px"
+          height="11px"
+          color="#fff"
+          className="ml-10"
+        />
+      </div>
 
-      <HStack order={[3, 3]}>
-        <HStack
-          height="38px"
-          padding="10px 12px"
-          cursor="pointer"
-          alignItems="center"
-          // minWidth="125px"
-          sx={{
-            "@media (max-width: 1023px)": {
-              minWidth: "125px",
-            },
-          }}
-          justify="center"
-          bg="#0faf59"
-          borderRadius="4px"
-          boxShadow="0 4px 10px rgba(53,183,113,.25)"
-          _hover={{ bg: "#05c65e" }}
+      {/* 通知 */}
+      <div className="rounded-[4px] bg-[#2b3040] p-5 ml-5 flex justify-center items-center hover:bg-[#000] sm:order-1 sm:w-38 sm:h-38 sm:ml-0 sm:mr-20">
+        <SvgIcon
+          name="notification"
+          className="h-14 w-14 sm:h-16 sm:w-16"
+          color="#fff"
+        />
+      </div>
+
+      {/* 存款 */}
+      <div className="h-full flex ml-auto sm:order-3">
+        <div
+          className="h-full flex justify-center items-center 
+      cursor-pointer bg-[#0faf59] hover:bg-[#05c65e] 
+      rounded-[4px] px-12 py-3  shadow-[0_4px_10px_rgba(53,183,113,.25)] 
+       sm:ml-20 sm:w-125 sm:h-38 lg:w-auto"
         >
-          <SvgIcon name="plus" width="12px" height="12px" />
+          <SvgIcon
+            name="plus"
+            width="12px"
+            height="12px"
+            className="hidden sm:block sm:mr-10"
+          />
           <Text fontSize="14px" fontWeight="700">
             存款
           </Text>
-        </HStack>
-
-        <Hide breakpoint="(max-width: 1023px)">
-          <HStack
-            height="38px"
-            padding="10px 12px"
-            bg="header.btnBg"
-            alignItems="center"
-            justify="center"
-            borderRadius="4px"
-            _hover={{ bg: "header.btnHover" }}
-            cursor="pointer"
-          >
-            <Text fontSize="14px" fontWeight="700">
-              取款
-            </Text>
-          </HStack>
-        </Hide>
-      </HStack>
-    </HStack>
+        </div>
+        <div className="hidden h-38 px-12 py-10 ml-10 bg-[#2b3040] hover:bg-[#000] rounded-[4px] cursor-pointer items-center lg:flex ">
+          <Text fontSize="14px" fontWeight="700">
+            取款
+          </Text>
+        </div>
+      </div>
+    </div>
   );
 };
 

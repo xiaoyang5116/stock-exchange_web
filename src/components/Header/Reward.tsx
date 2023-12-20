@@ -1,4 +1,4 @@
-import { Flex, Image, Text, Box, Hide } from "@chakra-ui/react";
+import { Flex, Image, Text, Box, Hide, Show } from "@chakra-ui/react";
 import rewards_bg from "../../images/rewards_bg.png";
 import rocket from "../../images/rocket.png";
 
@@ -28,11 +28,11 @@ const Reward = () => {
           mr="8px"
         >
           <Image src={rocket} alt="rocket" width="30px" mr="8px" />
-          <Hide breakpoint="(max-width: 1024px)">
+          <Show above="lg">
             <Text as="span" color="#fff" fontSize="12px" fontWeight="400">
               根据存款余额获得30%的奖励
             </Text>
-          </Hide>
+          </Show>
           <Box
             style={{
               fontSize: "12px",

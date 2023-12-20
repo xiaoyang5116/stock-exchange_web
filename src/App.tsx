@@ -15,7 +15,6 @@ function App() {
         sm: "70px 1fr",
       }}
       minH={"100vh"}
-      gap="10px"
     >
       <Show above={"sm"}>
         <GridItem area={"nav"}>
@@ -29,5 +28,4 @@ function App() {
     </Grid>
   );
 }
-
 export default App;
