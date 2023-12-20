@@ -1,4 +1,4 @@
-import { Grid, GridItem, Show, SimpleGrid } from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import Header from "./components/Header/Header";
 import EmbeddedStock from "./components/EmbeddedStock";
