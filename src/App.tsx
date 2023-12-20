@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import Header from "./components/Header/Header";
 import EmbeddedStock from "./components/EmbeddedStock";
 import StockSidebar from "./components/StockSidebar/StockSidebar";
+import DealList from "./components/StockSidebar/DealList";
 
 function App() {
   return (
@@ -22,11 +23,16 @@ function App() {
           <Nav />
         </GridItem>
       </Show>
-      <GridItem area={"main"} borderRadius="5px" className="flex flex-col">
+      <GridItem
+        area={"main"}
+        borderRadius="5px"
+        className="flex flex-col sm:block"
+      >
         <Header />
         <main className="h-full flex flex-col sm:m-10">
           <EmbeddedStock />
           <StockSidebar />
+          <DealList />
         </main>
       </GridItem>
     </Grid>
