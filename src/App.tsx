@@ -2,6 +2,7 @@ import { Grid, GridItem, Show } from "@chakra-ui/react";
 import Nav from "./components/Nav";
 import Header from "./components/Header/Header";
 import EmbeddedStock from "./components/EmbeddedStock";
+import StockSidebar from "./components/StockSidebar";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
       </Show>
       <GridItem area={"main"} borderRadius="5px" className="flex flex-col">
         <Header />
-        <main className="h-full m-10">
+        <main className="h-full flex flex-col sm:m-10">
           <EmbeddedStock />
+          <StockSidebar />
         </main>
       </GridItem>
     </Grid>
