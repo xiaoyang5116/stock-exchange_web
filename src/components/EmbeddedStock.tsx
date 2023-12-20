@@ -1,7 +1,7 @@
 // TradingViewWidget.jsx
 import { useEffect, useRef, memo } from "react";
 
-function TradingViewWidget() {
+const TradingViewWidget = memo(() => {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -12,30 +12,31 @@ function TradingViewWidget() {
     script.async = true;
     script.innerHTML = `
         {
-          "autosize": true,
           "symbol": "NASDAQ:AAPL",
           "interval": "D",
-          "timezone": "Etc/UTC",
+          "timezone": "Asia/Shanghai",
           "theme": "dark",
           "style": "1",
           "locale": "zh_CN",
           "enable_publishing": false,
+          "hide_top_toolbar": true,
           "allow_symbol_change": true,
           "support_host": "https://www.tradingview.com"
         }`;
     container.current?.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
   }, []);
 
   return (
     <div
       className="tradingview-widget-container"
       ref={container}
-      style={{ height: "100%", width: "100%" }}
+      style={{ flex: 1 }}
     >
-      <div
-        className="tradingview-widget-container__widget"
-        style={{ height: "calc(100% - 32px)", width: "100%" }}
-      ></div>
+      {/* <div className="tradingview-widget-container__widget"></div>
       <div className="tradingview-widget-copyright">
         <a
           href="https://cn.tradingview.com/"
@@ -44,9 +45,9 @@ function TradingViewWidget() {
         >
           <span className="blue-text">在TradingView上跟踪所有市场</span>
         </a>
-      </div>
+      </div> */}
     </div>
   );
-}
+});
 
-export default memo(TradingViewWidget);
+export default TradingViewWidget;
